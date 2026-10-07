@@ -3,4 +3,5 @@ fastembed
 fastapi
 uvicorn
 gradio
+spaces
 streamlit
