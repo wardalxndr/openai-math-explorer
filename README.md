@@ -1,29 +1,29 @@
-# OpenAI Math Explorer - RAG Tanya Jawab 722 Naskah
+# OpenAI Math Explorer - RAG over 722 Manuscripts
 
-RAG kecil di atas rilis openai math (722 naskah, 372 family, lisensi Apache 2.0).
-Tujuan: jawab pertanyaan soal isi naskah dengan sitasi file dan halaman, plus badge status verifikasi Lean.
+A small RAG on top of the openai math release (722 manuscripts, 372 families, Apache 2.0 license).
+Goal: answer questions about the manuscripts with file and page citations, plus a Lean verification status badge.
 
-Scope awal: `overview.pdf` (41 halaman) + 10 PDF `reasoning_traces` + metadata family.
+Initial scope: `overview.pdf` (41 pages) + 10 PDFs in `reasoning_traces` + family metadata.
 
-## Cara jalanin
+## Quickstart
 
 1. `pip install -r requirements.txt`
-2. Clone sumber (sekali aja, berat): `git clone https://github.com/openai/math.git ../openai-math`
-3. Generate index: `python scripts/build_math_index.py --src ../openai-math --out public/math-index.json`
-4. Buka Explore UI (nyusul): `streamlit run app.py`
+2. Clone the source (one time, heavy): `git clone https://github.com/openai/math.git ../openai-math`
+3. Generate the index: `python scripts/build_math_index.py --src ../openai-math --out public/math-index.json`
+4. Open the Explore UI (coming soon): `streamlit run app.py`
 
-## Struktur
+## Structure
 
-- `scripts/build_math_index.py`: PDF jadi chunk JSON
-- `public/math-index.json`: index siap search (digenerate, 326 chunk sekitar 359 KB)
-- `app.py`: UI Explore + Ask (nyusul)
+- `scripts/build_math_index.py`: turns PDFs into chunked JSON
+- `public/math-index.json`: generated search-ready index (326 chunks, about 359 KB)
+- `app.py`: Explore + Ask UI (coming soon)
 
-## Evaluasi (nyusul ala zoomcamp)
+## Evaluation (coming soon, zoomcamp style)
 
-- Retrieval: 30 ground truth manual, ukur hit rate dan MRR, bandingkan keyword vs vector
-- Jawaban: bandingkan 2 prompt, nilai pakai LLM as a Judge
+- Retrieval: 30 hand-made ground truths, measure hit rate and MRR, compare keyword vs vector
+- Answers: compare 2 prompts, score with LLM as a Judge
 
-## Catatan jujur
+## Honest note
 
-Banyak naskah belum peer review dan belum formal Lean. Yang belum formal bisa salah.
-Aplikasi ini selalu tampilkan sumber dan warning itu.
+Many manuscripts are not peer reviewed and not Lean formalized yet. Unformalized ones can be wrong.
+This app always shows sources and that warning.
