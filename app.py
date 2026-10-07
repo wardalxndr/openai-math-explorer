@@ -4,7 +4,6 @@ Uses hybrid retrieval plus Groq (set GROQ_API_KEY in Space Secrets).
 import os
 
 import gradio as gr
-import spaces
 
 from retrieval import build_prompt, groq_answer, hybrid
 
@@ -15,7 +14,6 @@ EXAMPLES = [
 ]
 
 
-@spaces.GPU
 def answer(question: str) -> str:
     prompt, ctx = build_prompt(question)
     if not os.environ.get("GROQ_API_KEY"):
