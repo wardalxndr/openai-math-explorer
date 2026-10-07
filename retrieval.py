@@ -20,9 +20,29 @@ STOP = set(
 )
 
 CHUNKS: list[dict] = json.loads((EVAL / "math-index.json").read_text(encoding="utf-8"))
-VECS = np.load(str(EVAL / "embeddings.npy"))
 IDS = [c["id"] for c in CHUNKS]
 BY_ID = {c["id"]: c for c in CHUNKS}
+
+_model = None
+_vecs: np.ndarray | None = None
+
+
+def get_vecs() -> np.ndarray:
+    """Load cached embeddings or compute them on first run (e.g. fresh Space)."""
+    global _vecs
+    if _vecs is not None:
+        return _vecs
+    cache = EVAL / "embeddings.npy"
+    if cache.exists():
+        _vecs = np.load(str(cache))
+        return _vecs
+    texts = [c["title"] + " " + c["chunk_text"] for c in CHUNKS]
+    _vecs = embed(texts)
+    try:
+        np.save(str(cache), _vecs)
+    except OSError:
+        pass
+    return _vecs
 
 _model = None
 
@@ -51,8 +71,9 @@ def keyword_rank(query: str) -> list[str]:
 
 
 def vector_rank(query: str) -> list[str]:
+    vecs = get_vecs()
     q = embed([query])[0]
-    sims = (VECS / (np.linalg.norm(VECS, axis=1, keepdims=True) + 1e-9)) @ (
+    sims = (vecs / (np.linalg.norm(vecs, axis=1, keepdims=True) + 1e-9)) @ (
         q / (np.linalg.norm(q) + 1e-9)
     )
     return [IDS[i] for i in np.argsort(-sims)]
