@@ -1,2 +1,5 @@
 pypdf
+fastembed
+fastapi
+uvicorn
 streamlit
