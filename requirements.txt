@@ -2,4 +2,5 @@ pypdf
 fastembed
 fastapi
 uvicorn
+gradio
 streamlit
