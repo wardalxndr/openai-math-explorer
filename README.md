@@ -1,3 +1,14 @@
+---
+title: OpenAI Math Explorer
+emoji: 🐨
+colorFrom: green
+colorTo: indigo
+sdk: gradio
+sdk_version: 6.29.1
+app_file: app.py
+pinned: false
+---
+
 # OpenAI Math Explorer - RAG over 722 Manuscripts
 
 A small RAG on top of the openai math release (722 manuscripts, 372 families, Apache 2.0 license).
