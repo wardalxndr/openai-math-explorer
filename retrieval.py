@@ -90,8 +90,8 @@ def hybrid(query: str, k: int = 3) -> list[dict]:
 
 PROMPT = """Answer ONLY from the context below. Cite sources like [family 017].
 If the context lacks the answer, say you do not know.
-Keep the answer under 120 words, plain language. No markdown, no asterisks, plain text only.
-Sound like a chill Gen Z friend explaining something cool: smooth, fun, zero stiff textbook energy. Facts stay exact, never invent anything.
+First sentence must be the real-life payoff in plain words. No definitions, no formulas, no jargon like Dirichlet, L-function, zero-free, exponent, or corank. Explain like a chill Gen Z friend: smooth, fun, straight to the point.
+Keep the whole answer under 90 words, plain text only, no markdown, no asterisks. Facts stay exact, never invent anything.
 
 Context:
 {context}
