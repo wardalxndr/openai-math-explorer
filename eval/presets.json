@@ -34,5 +34,209 @@
         "pdf_path": "preprints family 002"
       }
     ]
+  },
+  {
+    "q": "Which authors are read for the single-scale obstruction to weighted divisor graphs?",
+    "a": "Reading Klurman, Mangerel, and Teravainen [6] and Tao-Teravainen's cancellation outside exceptional scales [12] and Tao's logarithmically averaged theorem [13] are read.",
+    "citations": [
+      {
+        "id": "ordinary-two-point-correlations-2",
+        "title": "ordinary two point correlations",
+        "family": "007",
+        "pdf_path": "reasoning_traces/ordinary-two-point-correlations.pdf"
+      }
+    ]
+  },
+  {
+    "q": "What is the irrationality exponent of pi?",
+    "a": "The irrationality exponent of pi is 2. It's the best possible way to approximate pi with fractions.",
+    "citations": [
+      {
+        "id": "irrationality-exponent-of-pi-0",
+        "title": "irrationality exponent of pi",
+        "family": "017",
+        "pdf_path": "reasoning_traces/irrationality-exponent-of-pi.pdf"
+      }
+    ]
+  },
+  {
+    "q": "Which methods were considered for bounding the irrationality exponent of pi?",
+    "a": "Methods considered for bounding the irrationality exponent of pi include Flint-Hills series, interpolation-and-determinant technique, Catalan determinants, Ramanujan-Chudnovsky convergence, and Cijsouw-style exponential interpolation.",
+    "citations": [
+      {
+        "id": "irrationality-exponent-of-pi-1",
+        "title": "irrationality exponent of pi",
+        "family": "017",
+        "pdf_path": "reasoning_traces/irrationality-exponent-of-pi.pdf"
+      }
+    ]
+  },
+  {
+    "q": "What do the symmetric and general Mahler conjectures state?",
+    "a": "The symmetric and general Mahler conjectures state that the cube minimizes the volume product.",
+    "citations": [
+      {
+        "id": "symmetric-and-general-mahler-conjectures-0",
+        "title": "symmetric and general mahler conjectures",
+        "family": "087",
+        "pdf_path": "reasoning_traces/symmetric-and-general-mahler-conjectures.pdf"
+      }
+    ]
+  },
+  {
+    "q": "What is the polar body of a convex body?",
+    "a": "The polar body of a convex body K is the set of all y in R^n such that the dot product of x and y is less than or equal to 1 for all x in K.",
+    "citations": [
+      {
+        "id": "symmetric-and-general-mahler-conjectures-1",
+        "title": "symmetric and general mahler conjectures",
+        "family": "087",
+        "pdf_path": "reasoning_traces/symmetric-and-general-mahler-conjectures.pdf"
+      }
+    ]
+  },
+  {
+    "q": "What is NP-hardness at the basic semidefinite threshold about?",
+    "a": "Proving how hard it is to solve certain problems with basic semidefinite programming.",
+    "citations": [
+      {
+        "id": "basic-semidefinite-threshold-np-hardness-0",
+        "title": "basic semidefinite threshold np hardness",
+        "family": "102",
+        "pdf_path": "reasoning_traces/basic-semidefinite-threshold-np-hardness.pdf"
+      }
+    ]
+  },
+  {
+    "q": "How is a constraint satisfaction instance with finitely many variables described?",
+    "a": "An instance I has finitely many variables x_1,...,x_n in D and a finite nonempty list of constraint occurrences e=1,...,m.",
+    "citations": [
+      {
+        "id": "basic-semidefinite-threshold-np-hardness-1",
+        "title": "basic semidefinite threshold np hardness",
+        "family": "102",
+        "pdf_path": "reasoning_traces/basic-semidefinite-threshold-np-hardness.pdf"
+      }
+    ]
+  },
+  {
+    "q": "How is the value of an assignment defined for unweighted instances?",
+    "a": "For unweighted instances, the value of an assignment is defined as the sum of the weights of satisfied predicates.",
+    "citations": [
+      {
+        "id": "basic-semidefinite-threshold-np-hardness-2",
+        "title": "basic semidefinite threshold np hardness",
+        "family": "102",
+        "pdf_path": "reasoning_traces/basic-semidefinite-threshold-np-hardness.pdf"
+      }
+    ]
+  },
+  {
+    "q": "What are quasipolynomial bounds for arithmetic progressions?",
+    "a": "This math result from OpenAI's collection says it can find patterns in large datasets, like prime numbers or sensor logs, with stronger math guarantees. It uses a concept called \"quasipolynomial bounds for arithmetic progressions\" to do this.",
+    "citations": [
+      {
+        "id": "quasipolynomial-arithmetic-progressions-0",
+        "title": "quasipolynomial arithmetic progressions",
+        "family": "159",
+        "pdf_path": "reasoning_traces/quasipolynomial-arithmetic-progressions.pdf"
+      }
+    ]
+  },
+  {
+    "q": "Which bound by Leng, Sah and Sawhney is discussed?",
+    "a": "Leng, Sah, and Sawhney's inverse theorem and density-increment bounds are mentioned.",
+    "citations": [
+      {
+        "id": "quasipolynomial-arithmetic-progressions-2",
+        "title": "quasipolynomial arithmetic progressions",
+        "family": "159",
+        "pdf_path": "reasoning_traces/quasipolynomial-arithmetic-progressions.pdf"
+      }
+    ]
+  },
+  {
+    "q": "What is Kaplansky's direct finiteness conjecture in characteristic two?",
+    "a": "Kaplansky's direct finiteness conjecture in characteristic two is a mathematical problem that asks whether ab = 1 forces ba = 1 in every positive-characteristic group algebra. \n\nThis problem is related to whether ab = 1 implies ba = 1 in group algebras with characteristic two. The solution involves model theory and precise ring definitions, and it is still an open problem in mathematics.",
+    "citations": [
+      {
+        "id": "kaplansky-direct-finiteness-characteristic-two-0",
+        "title": "kaplansky direct finiteness characteristic two",
+        "family": "197",
+        "pdf_path": "reasoning_traces/kaplansky-direct-finiteness-characteristic-two.pdf"
+      }
+    ]
+  },
+  {
+    "q": "What does ab = 1 imply ba = 1 mean in a group algebra?",
+    "a": "If ab = 1, then ba = 1 in a group algebra.",
+    "citations": [
+      {
+        "id": "kaplansky-direct-finiteness-characteristic-two-1",
+        "title": "kaplansky direct finiteness characteristic two",
+        "family": "197",
+        "pdf_path": "reasoning_traces/kaplansky-direct-finiteness-characteristic-two.pdf"
+      }
+    ]
+  },
+  {
+    "q": "What is the Mezard-Parisi formula for diluted spin glasses?",
+    "a": "The Mezard-Parisi formula for diluted spin glasses proves the hierarchical cavity formula, which helps understand how deep learning training works, as it's connected to neural networks and combinatorial optimization [family 221].",
+    "citations": [
+      {
+        "id": "mezard-parisi-formula-0",
+        "title": "mezard parisi formula",
+        "family": "221",
+        "pdf_path": "reasoning_traces/mezard-parisi-formula.pdf"
+      }
+    ]
+  },
+  {
+    "q": "What role do cavity fields play in the Mezard-Parisi formula?",
+    "a": "A cavity field is used in the many-site cavity argument, where condition on randomness shared by all sites in a hierarchical representation, then seek independent site messages.",
+    "citations": [
+      {
+        "id": "mezard-parisi-formula-1",
+        "title": "mezard parisi formula",
+        "family": "221",
+        "pdf_path": "reasoning_traces/mezard-parisi-formula.pdf"
+      }
+    ]
+  },
+  {
+    "q": "What is spontaneous magnetization in the quantum Heisenberg ferromagnet?",
+    "a": "Magnets store our data, from hard drives to MRI machines. Exact low temperature laws let engineers design denser and more stable magnetic memory.",
+    "citations": [
+      {
+        "id": "spontaneous-magnetization-quantum-heisenberg-ferromagnet-0",
+        "title": "spontaneous magnetization quantum heisenberg ferromagnet",
+        "family": "271",
+        "pdf_path": "reasoning_traces/spontaneous-magnetization-quantum-heisenberg-ferromagnet.pdf"
+      }
+    ]
+  },
+  {
+    "q": "What is asked about canonical group generators versus arbitrary elements?",
+    "a": "The OpenAI math release mentions a result about canonical group generators to arbitrary elements, without requiring a chosen group presentation.",
+    "citations": [
+      {
+        "id": "free-group-factor-isomorphism-1",
+        "title": "free group factor isomorphism",
+        "family": "287",
+        "pdf_path": "reasoning_traces/free-group-factor-isomorphism.pdf"
+      }
+    ]
+  },
+  {
+    "q": "What is global existence for the relativistic Vlasov-Maxwell system?",
+    "a": "Global existence for the relativistic Vlasov-Maxwell system means that simulations of hot plasma in fusion reactors and space, which describe the behavior of matter and energy, will always have a solution that stays smooth and doesn't break down, no matter how long the simulation runs.",
+    "citations": [
+      {
+        "id": "relativistic-vlasov-maxwell-0",
+        "title": "relativistic vlasov maxwell",
+        "family": "362",
+        "pdf_path": "reasoning_traces/relativistic-vlasov-maxwell.pdf"
+      }
+    ]
   }
 ]
