@@ -98,10 +98,12 @@ Context:
 Question: {question}
 Answer:"""
 
+COLLECTION = """[collection] The OpenAI math release (Oct 6 2026) holds 722 manuscripts in 372 families. Results sit at different verification stages. Many have Lean formalizations in the lean/ library. Results without Lean formalization could have issues, per OpenAI. This demo indexes overview.pdf plus 10 reasoning traces (families 007, 017, 087, 102, 159, 197, 221, 271, 287, 362). Lean status varies per family."""
+
 
 def build_prompt(query: str, k: int = 3) -> tuple[str, list[dict]]:
     ctx = hybrid(query, k)
-    context = "\n\n".join(
+    context = COLLECTION + "\n\n" + "\n\n".join(
         f"[family {c['family']}] {c['title']}: {c['chunk_text'][:900]}" for c in ctx
     )
     return PROMPT.format(context=context, question=query), ctx
