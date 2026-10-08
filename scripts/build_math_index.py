@@ -35,8 +35,34 @@ def read_pdf(path: Path) -> str:
         texts.append(page.extract_text() or "")
     return "\n".join(texts)
 
-def chunk(text: str, size: int = 800) -> list[str]:
+def clean(text: str) -> str:
+    """Normalize PDF extraction artifacts: math alphabets to ASCII,
+    exotic spaces to normal spaces, common symbols to plain text."""
+    import unicodedata
+
+    text = unicodedata.normalize("NFKD", text)
+    text = "".join(c for c in text if not unicodedata.combining(c))
+    for a, b in [
+        ("−", "-"),
+        ("–", "-"),
+        ("—", "-"),
+        ("≥", ">="),
+        ("≤", "<="),
+        ("·", "*"),
+        ("×", "x"),
+        ("’", "'"),
+        ("‘", "'"),
+        ("“", '"'),
+        ("”", '"'),
+        ("…", "..."),
+    ]:
+        text = text.replace(a, b)
     text = re.sub(r"\s+", " ", text).strip()
+    return text
+
+
+def chunk(text: str, size: int = 800) -> list[str]:
+    text = clean(text)
     return [text[i:i+size] for i in range(0, len(text), size) if text[i:i+size].strip()]
 
 def main():
