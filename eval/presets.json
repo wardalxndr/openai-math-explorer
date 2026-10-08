@@ -1,0 +1,38 @@
+[
+  {
+    "q": "Why should I care about the Riemann hypothesis?",
+    "a": "Primes are like locks on the internet, and controlling how primes are distributed helps keep online transactions and chat encryption secure.",
+    "citations": [
+      {
+        "id": "highlight-003",
+        "title": "The quasi-Riemann hypothesis",
+        "family": "003",
+        "pdf_path": "preprints family 003"
+      }
+    ]
+  },
+  {
+    "q": "Which result makes AI computers faster?",
+    "a": "Matrix multiplication with exponent at most 9/4. This result proves that matrix multiplication can be done in a way that's faster than before, making AI training, graphics, and science simulations run quicker.",
+    "citations": [
+      {
+        "id": "highlight-107",
+        "title": "Matrix multiplication with exponent at most 9/4",
+        "family": "107",
+        "pdf_path": "preprints family 107"
+      }
+    ]
+  },
+  {
+    "q": "Which math keeps my Bitcoin safe?",
+    "a": "The math that keeps your Bitcoin safe is related to family 002, the Full Birch Swinnerton-Dyer formula in low rank. It's about elliptic curves that guard Bitcoin wallets and secure messaging. Progress here hardens the foundations under modern cryptography.",
+    "citations": [
+      {
+        "id": "highlight-002",
+        "title": "Full Birch Swinnerton-Dyer formula in low rank",
+        "family": "002",
+        "pdf_path": "preprints family 002"
+      }
+    ]
+  }
+]

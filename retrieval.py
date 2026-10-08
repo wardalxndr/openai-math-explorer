@@ -20,6 +20,7 @@ STOP = set(
 )
 
 CHUNKS: list[dict] = json.loads((EVAL / "math-index.json").read_text(encoding="utf-8"))
+HIGHLIGHTS: list[dict] = json.loads((EVAL / "highlights.json").read_text(encoding="utf-8"))
 IDS = [c["id"] for c in CHUNKS]
 BY_ID = {c["id"]: c for c in CHUNKS}
 

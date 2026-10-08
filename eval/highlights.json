@@ -1,0 +1,182 @@
+[
+  {
+    "family": "003",
+    "title": "The quasi-Riemann hypothesis",
+    "subject": "Number theory",
+    "kind": "proof",
+    "claim": "Every Dirichlet L-function, including the Riemann zeta, has no zeros past 7/8. A big step toward the full Riemann hypothesis.",
+    "why": "Primes are the locks of the internet. Every bank login and chat encryption leans on how primes are distributed. Tighter control of zeta zeros means tighter guarantees for that math.",
+    "pdf_hint": "preprints family 003"
+  },
+  {
+    "family": "002",
+    "title": "Full Birch Swinnerton-Dyer formula in low rank",
+    "subject": "Number theory",
+    "kind": "proof",
+    "claim": "Proves the full BSD formula for elliptic curves of Selmer corank zero and one.",
+    "why": "Elliptic curves guard Bitcoin wallets and secure messaging. BSD connects their algebra to their analytics, so progress here hardens the foundations under modern cryptography.",
+    "pdf_hint": "preprints family 002"
+  },
+  {
+    "family": "004",
+    "title": "Hilbert's tenth problem over Q",
+    "subject": "Logic",
+    "kind": "proof",
+    "claim": "No algorithm can decide whether an integer-coefficient polynomial has a rational solution.",
+    "why": "It draws a hard border around what computers can ever do. Solver and AI verification tools must respect this wall when reasoning about equations.",
+    "pdf_hint": "preprints family 004"
+  },
+  {
+    "family": "017",
+    "title": "The irrationality exponent of pi is 2",
+    "subject": "Number theory",
+    "kind": "proof",
+    "claim": "Pi cannot be approximated by fractions any better than the theoretical optimum, exponent exactly 2.",
+    "why": "Sets the gold standard for approximating constants in scientific computing. Numerical libraries now know the best error bound they can hope for with pi.",
+    "pdf_hint": "reasoning_traces/irrationality-exponent-of-pi.pdf"
+  },
+  {
+    "family": "032",
+    "title": "Rational Hodge conjecture for CM abelian varieties",
+    "subject": "Geometry",
+    "kind": "proof",
+    "claim": "Proves the rational Hodge conjecture for CM abelian varieties and products of K3 surfaces.",
+    "why": "The Hodge conjecture is a million-dollar Millennium problem about shapes defined by equations. Cracking big cases guides string theory geometry and next generation encryption shapes.",
+    "pdf_hint": "preprints family 032"
+  },
+  {
+    "family": "073",
+    "title": "Falconer distance conjecture in every dimension",
+    "subject": "Analysis",
+    "kind": "proof",
+    "claim": "Resolves how large a point set must be before its distance set fills an interval.",
+    "why": "Radar, medical imaging, and sensor networks all reconstruct scenes from distance data. This tells engineers the minimum sensor density that guarantees full coverage.",
+    "pdf_hint": "preprints family 073"
+  },
+  {
+    "family": "074",
+    "title": "Kakeya in three and four dimensions",
+    "subject": "Analysis",
+    "kind": "proof",
+    "claim": "Resolves the Kakeya maximal conjecture in 3D and 4D: needle sets must be fat.",
+    "why": "Kakeya sets model how waves and signals can focus into tiny regions. Results feed antenna design, optics, and understanding rogue wave formation.",
+    "pdf_hint": "preprints family 074"
+  },
+  {
+    "family": "087",
+    "title": "Symmetric and general Mahler conjectures",
+    "subject": "Convex geometry",
+    "kind": "proof",
+    "claim": "Resolves both Mahler conjectures plus symplectic width: the cube minimizes volume product.",
+    "why": "Volume products sit at the heart of optimization and packing problems, from warehouse logistics to error correcting codes. A century old gap is now closed.",
+    "pdf_hint": "reasoning_traces/symmetric-and-general-mahler-conjectures.pdf"
+  },
+  {
+    "family": "090",
+    "title": "Universal optimality of the triangular lattice",
+    "subject": "Geometry",
+    "kind": "proof",
+    "claim": "The triangular lattice minimizes energy for a wide class of potentials: mathematically the best arrangement.",
+    "why": "Nature packs honeycombs and atoms this way. Proof confirms optimal layouts for materials science, 5G sphere packings, and error correcting signal constellations.",
+    "pdf_hint": "preprints family 090"
+  },
+  {
+    "family": "102",
+    "title": "Unique Games and optimal approximation thresholds",
+    "subject": "Computer science",
+    "kind": "proof",
+    "claim": "Proves Khot's Unique Games Conjecture and pins down optimal approximation thresholds.",
+    "why": "Delivery routing, chip design, and scheduling rely on approximation algorithms. This result maps exactly how good those algorithms can ever get.",
+    "pdf_hint": "reasoning_traces/basic-semidefinite-threshold-np-hardness.pdf"
+  },
+  {
+    "family": "103",
+    "title": "Derandomization: L = RL = BPL",
+    "subject": "Computer science",
+    "kind": "proof",
+    "claim": "Randomness adds no power to logarithmic space computation.",
+    "why": "Randomized algorithms run our networks and databases. Removing their need for randomness means cheaper, reproducible, and more secure low memory computation.",
+    "pdf_hint": "preprints family 103"
+  },
+  {
+    "family": "107",
+    "title": "Matrix multiplication with exponent at most 9/4",
+    "subject": "Computer science",
+    "kind": "algorithm",
+    "claim": "Proves matrix multiplication exponent at most 9/4 over C.",
+    "why": "Matrix multiplication powers AI training, graphics, and science simulations. A smaller exponent is a direct speedup for every GPU workload on Earth.",
+    "pdf_hint": "preprints family 107"
+  },
+  {
+    "family": "109",
+    "title": "Integer multiplication below n log n",
+    "subject": "Computer science",
+    "kind": "algorithm",
+    "claim": "Multiplies n-bit integers faster than n log n at every input length.",
+    "why": "Big number arithmetic underlies encryption and banking. Faster multiplication trims latency and energy for every secure transaction.",
+    "pdf_hint": "preprints family 109"
+  },
+  {
+    "family": "120",
+    "title": "Almost-linear-time exact matching",
+    "subject": "Computer science",
+    "kind": "algorithm",
+    "claim": "Finds exact matchings in general graphs in almost linear time.",
+    "why": "Matching pairs workers to jobs, donors to patients, riders to drivers. Near linear time means planetary scale assignment problems become routine.",
+    "pdf_hint": "preprints family 120"
+  },
+  {
+    "family": "159",
+    "title": "Erdos reciprocal-sum and Szemeredi bounds",
+    "subject": "Combinatorics",
+    "kind": "proof",
+    "claim": "Proves Erdos's reciprocal-sum conjecture with quasipolynomial Szemeredi bounds.",
+    "why": "Guarantees hidden patterns inside large datasets, from prime numbers to sensor logs. Pattern mining tools inherit stronger mathematical guarantees.",
+    "pdf_hint": "reasoning_traces/quasipolynomial-arithmetic-progressions.pdf"
+  },
+  {
+    "family": "221",
+    "title": "Mezard-Parisi formula for diluted spin glasses",
+    "subject": "Probability",
+    "kind": "proof",
+    "claim": "Proves the hierarchical cavity formula for diluted spin glasses.",
+    "why": "Spin glass math secretly governs neural networks and combinatorial optimization. This unlocks better understanding of why deep learning training works.",
+    "pdf_hint": "reasoning_traces/mezard-parisi-formula.pdf"
+  },
+  {
+    "family": "266",
+    "title": "Exactly three mutually unbiased bases in dimension six",
+    "subject": "Quantum",
+    "kind": "proof",
+    "claim": "Proves N(6) = 3, resolving Zauner's conjecture on measurement bases.",
+    "why": "Mutually unbiased bases are the alphabet of quantum cryptography. Knowing the exact limit in dimension six fixes what quantum key distribution can achieve there.",
+    "pdf_hint": "preprints family 266"
+  },
+  {
+    "family": "279",
+    "title": "Exact quantum factoring over a fixed gate set",
+    "subject": "Quantum",
+    "kind": "algorithm",
+    "claim": "Polynomial-time uniform quantum factoring over a fixed finite gate set.",
+    "why": "Factoring breaks RSA encryption. Making it work over realistic fixed hardware brings the post quantum migration deadline closer and more concrete.",
+    "pdf_hint": "preprints family 279"
+  },
+  {
+    "family": "271",
+    "title": "Bloch's law and spontaneous ferromagnetic order",
+    "subject": "Physics",
+    "kind": "proof",
+    "claim": "Proves Bloch's T3/2 law with exact coefficients plus spontaneous magnetization.",
+    "why": "Magnets store our data, from hard drives to MRI machines. Exact low temperature laws let engineers design denser and more stable magnetic memory.",
+    "pdf_hint": "reasoning_traces/spontaneous-magnetization-quantum-heisenberg-ferromagnet.pdf"
+  },
+  {
+    "family": "362",
+    "title": "Global smoothness for relativistic Vlasov Maxwell",
+    "subject": "PDE",
+    "kind": "proof",
+    "claim": "Large-data global existence and smoothness for the 3D relativistic Vlasov Maxwell system.",
+    "why": "These equations describe hot plasma in fusion reactors and space. Global smoothness means simulations of clean fusion energy rest on solid ground.",
+    "pdf_hint": "reasoning_traces/relativistic-vlasov-maxwell.pdf"
+  }
+]
