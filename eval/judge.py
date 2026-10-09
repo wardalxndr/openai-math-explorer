@@ -53,7 +53,7 @@ def gemini(prompt: str, temperature: float = 0.2) -> str:
         }
     ).encode()
     req = urllib.request.Request(
-        "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key="
+        "https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key="
         + KEY,
         data=body,
         headers={"Content-Type": "application/json"},
