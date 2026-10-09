@@ -63,6 +63,11 @@ def gemini(prompt: str, temperature: float = 0.2, max_tokens: int = 300) -> str:
             )
             with urllib.request.urlopen(req, timeout=90) as r:
                 return json.loads(r.read())["candidates"][0]["content"]["parts"][0]["text"]
+        except urllib.error.HTTPError as e:
+            last = e
+            import time
+
+            time.sleep(90 if e.code == 429 else 15 * (attempt + 1))
         except Exception as e:
             last = e
             import time
@@ -115,9 +120,23 @@ def judge(expected: str, question: str, a: str, b: str) -> dict:
 def main() -> None:
     gt = json.loads((HERE / "ground_truth.json").read_text(encoding="utf-8"))
     chunks = {c["id"]: c for c in json.loads((HERE / "math-index.json").read_text(encoding="utf-8"))}
+    out_file = HERE / "judge_results.json"
+    done: dict[int, dict] = {}
+    if out_file.exists():
+        try:
+            for r in json.loads(out_file.read_text(encoding="utf-8")).get("results", []):
+                done[r["idx"]] = r
+        except Exception:
+            pass
     results = []
     wins = {"a": 0, "b": 0}
     for idx in SAMPLE:
+        if idx in done:
+            r = done[idx]
+            results.append(r)
+            wins[r["verdict"]["winner"]] += 1
+            print(f"skip {idx}: winner={r['verdict']['winner']} (cached)", flush=True)
+            continue
         item = gt[idx]
         q = item["question"]
         context, _ = context_for(q)
@@ -126,12 +145,12 @@ def main() -> None:
         b = gemini(PROMPT_B.format(context=context, question=q))
         verdict = judge(expected, q, a, b)
         wins[verdict["winner"]] += 1
-        results.append({"q": q, "a": a, "b": b, "verdict": verdict})
+        results.append({"idx": idx, "q": q, "a": a, "b": b, "verdict": verdict})
         print(f"done {idx}: winner={verdict['winner']}", flush=True)
-    (HERE / "judge_results.json").write_text(
-        json.dumps({"wins": wins, "results": results}, ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
+        out_file.write_text(
+            json.dumps({"wins": wins, "results": results}, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
     print("WINS:", wins)
 
 
