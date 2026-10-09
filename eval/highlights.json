@@ -1,5 +1,32 @@
 [
   {
+    "family": "007",
+    "title": "Two-point patterns in prime-like numbers",
+    "subject": "Number theory",
+    "kind": "proof",
+    "claim": "Proves the ordinary two-point Chowla and corrected binary Elliott conjectures for multiplicative functions.",
+    "why": "Phone encryption and lotteries lean on numbers that behave randomly. This proves prime-like numbers stay unpredictable in pairs, keeping that randomness honest.",
+    "pdf_hint": "reasoning_traces/ordinary-two-point-correlations.pdf"
+  },
+  {
+    "family": "197",
+    "title": "Kaplansky's rulebook for algebra",
+    "subject": "Algebra",
+    "kind": "proof",
+    "claim": "Proves direct finiteness in characteristic two: ab = 1 forces ba = 1 in group algebras.",
+    "why": "Algebra's rulebook underlies error-correcting codes and cryptography. Confirming the rules hold in the trickiest setting keeps those systems trustworthy.",
+    "pdf_hint": "reasoning_traces/kaplansky-direct-finiteness-characteristic-two.pdf"
+  },
+  {
+    "family": "287",
+    "title": "All free group factors are one",
+    "subject": "Operator algebras",
+    "kind": "proof",
+    "claim": "Resolves the free group factor isomorphism problem: all nonabelian free group factors are isomorphic.",
+    "why": "These strange infinite objects are the math lab where quantum information theory is tested. Knowing they are all one simplifies the whole landscape.",
+    "pdf_hint": "reasoning_traces/free-group-factor-isomorphism.pdf"
+  },
+  {
     "family": "003",
     "title": "The quasi-Riemann hypothesis",
     "subject": "Number theory",
