@@ -45,11 +45,11 @@ Score each 1-5 on: grounded (no invented facts), correct (matches expected), cle
 Reply ONLY as JSON: {{"a": {{"grounded": n, "correct": n, "clear": n}}, "b": {{"grounded": n, "correct": n, "clear": n}}, "winner": "a or b"}}"""
 
 
-def gemini(prompt: str, temperature: float = 0.2) -> str:
+def gemini(prompt: str, temperature: float = 0.2, max_tokens: int = 300) -> str:
     body = json.dumps(
         {
             "contents": [{"parts": [{"text": prompt}]}],
-            "generationConfig": {"temperature": temperature, "maxOutputTokens": 300},
+            "generationConfig": {"temperature": temperature, "maxOutputTokens": max_tokens},
         }
     ).encode()
     last: Exception | None = None
@@ -90,6 +90,28 @@ def context_for(query: str) -> tuple[str, list[dict]]:
     return context, ctx
 
 
+def judge(expected: str, question: str, a: str, b: str) -> dict:
+    import re as _re
+
+    last: Exception | None = None
+    for _ in range(3):
+        try:
+            raw = gemini(
+                JUDGE_PROMPT.format(
+                    expected=expected[:1200], question=question, a=a[:800], b=b[:800]
+                ),
+                0,
+                600,
+            )
+            m = _re.search(r"\{.*\}", raw, _re.DOTALL)
+            verdict = json.loads(m.group(0) if m else raw)
+            if verdict.get("winner") in ("a", "b"):
+                return verdict
+        except Exception as e:
+            last = e
+    raise last if last else RuntimeError("judge failed")
+
+
 def main() -> None:
     gt = json.loads((HERE / "ground_truth.json").read_text(encoding="utf-8"))
     chunks = {c["id"]: c for c in json.loads((HERE / "math-index.json").read_text(encoding="utf-8"))}
@@ -102,15 +124,10 @@ def main() -> None:
         expected = " ".join(chunks[cid]["chunk_text"][:400] for cid in item["relevant_ids"] if cid in chunks)
         a = gemini(PROMPT_A.format(context=context, question=q))
         b = gemini(PROMPT_B.format(context=context, question=q))
-        verdict = json.loads(
-            gemini(JUDGE_PROMPT.format(expected=expected[:1200], question=q, a=a[:800], b=b[:800]), 0)
-            .strip()
-            .removeprefix("```json")
-            .removesuffix("```")
-        )
+        verdict = judge(expected, q, a, b)
         wins[verdict["winner"]] += 1
         results.append({"q": q, "a": a, "b": b, "verdict": verdict})
-        print(f"done {idx}: winner={verdict['winner']}")
+        print(f"done {idx}: winner={verdict['winner']}", flush=True)
     (HERE / "judge_results.json").write_text(
         json.dumps({"wins": wins, "results": results}, ensure_ascii=False, indent=2),
         encoding="utf-8",
