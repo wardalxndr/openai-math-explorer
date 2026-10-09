@@ -23,6 +23,16 @@ app.add_middleware(
 )
 
 
+@app.get("/")
+def home():
+    return {
+        "service": "OpenAI Math Explorer",
+        "usage": "GET /search?q=... or GET /ask?q=...",
+        "scope": "722 manuscripts, 372 families (overview + 10 reasoning traces indexed)",
+        "note": "Claims as stated by OpenAI, not independently verified.",
+    }
+
+
 @app.get("/search")
 def search(q: str, k: int = 3):
     return {"query": q, "results": hybrid(q, max(1, min(k, 10)))}
