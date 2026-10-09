@@ -52,14 +52,23 @@ def gemini(prompt: str, temperature: float = 0.2) -> str:
             "generationConfig": {"temperature": temperature, "maxOutputTokens": 300},
         }
     ).encode()
-    req = urllib.request.Request(
-        "https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key="
-        + KEY,
-        data=body,
-        headers={"Content-Type": "application/json"},
-    )
-    with urllib.request.urlopen(req, timeout=90) as r:
-        return json.loads(r.read())["candidates"][0]["content"]["parts"][0]["text"]
+    last: Exception | None = None
+    for attempt in range(4):
+        try:
+            req = urllib.request.Request(
+                "https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key="
+                + KEY,
+                data=body,
+                headers={"Content-Type": "application/json"},
+            )
+            with urllib.request.urlopen(req, timeout=90) as r:
+                return json.loads(r.read())["candidates"][0]["content"]["parts"][0]["text"]
+        except Exception as e:
+            last = e
+            import time
+
+            time.sleep(15 * (attempt + 1))
+    raise last if last else RuntimeError("gemini failed")
 
 
 def context_for(query: str) -> tuple[str, list[dict]]:
